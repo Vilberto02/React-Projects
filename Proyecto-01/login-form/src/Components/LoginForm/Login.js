@@ -78,7 +78,7 @@ const LoginForm = () => {
           <div className="register-link">
             <p>
               No tienes una cuenta?{" "}
-              <Link to="/register">
+              <Link to="/signup">
                 <strong>Registrate aquí</strong>
               </Link>
             </p>

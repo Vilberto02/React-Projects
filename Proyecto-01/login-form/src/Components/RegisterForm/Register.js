@@ -22,7 +22,7 @@ const RegisterForm = () => {
     console.log("Empresa:", company);
     console.log("RUC:", ruc);
 
-    navigate("/Sign-Up");
+    navigate("/register");
   };
 
   return (
