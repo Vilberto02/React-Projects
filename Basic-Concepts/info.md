@@ -249,3 +249,58 @@ root.render(
   </>
 )
 ```
+
+## Manejadores de eventos
+
+Se usa igual que en javascript con HTML.
+
+## React Icons
+
+Se importan los iconos como componentes, también se puede hacer para componentes estilizados por terceros, ya sea botones, inputs, etc.
+
+Enlaces:
+
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Material UI React](https://mui.com/)
+
+```JSX
+import { VscBug } from "react-icons/vsc"
+
+...
+  <VscBug />
+...
+```
+
+## Recorrido de Arreglos
+
+Se usa funciones o metodos que ya recorren los arreglos:
+
+- `.map()`: Lee los elementos del arreglo y genera un nuevo arreglo. Te retorna el valor del elemento y su respectivo indice.
+- `.filter()`: Quitar elementos de un arreglo, filtra. Genera un nuevo arreglo.
+- `.find()`: Buscar un elemento en un arreglo.
+- `.sort()`: Ordenar el arreglo.
+- `.reduce()`
+- `.forEach()`
+
+## React Hooks
+
+[Hooks Reference](https://legacy.reactjs.org/docs/hooks-reference.html#usestate)
+
+### Basic Hooks
+
+#### useState
+
+Permite inicializar y actualizar valores de variables. Retorna un variable y una función para actualizar el valor de la variable. Es un estado.
+
+`const [name, setName] = useState(0)`
+
+#### useEffect
+
+- `useEffect(() => { console.log("render"})`: Se ejecuta cada vez que hay un cambio en un componente que lo contiene.
+- `useEffect(() => { console.log("render"}, [ ])`: Se ejecuta una sola vez, es decir, cuando el componente es creado.
+
+**Dependencia del useEffect**
+Se ejecuta si el valor o contenido de algo cambia, siguiendo la 2da sintaxis.
+
+- `useEffect(() => { console.log("render"}, [ counter ])`: Se ejecuta cuando el componente es creado y luego, se vuelve a ejecutar cada vez que cambia el valor de la variable (es un useSate).
+  | 7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffvvvvv
