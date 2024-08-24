@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./Modal.css";
 
 function Modal() {
-  return <div>Modal</div>;
+  return <div className={styles.container}>Modal</div>;
 }
 
 export default Modal;
