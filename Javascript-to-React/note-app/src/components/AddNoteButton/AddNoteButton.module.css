@@ -1,0 +1,22 @@
+.container {
+  width: 265px;
+  height: 265px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p {
+  user-select: none;
+}
+.add__btn {
+  align-self: center;
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 2px dashed #324a5eaf;
+  cursor: pointer;
+}
