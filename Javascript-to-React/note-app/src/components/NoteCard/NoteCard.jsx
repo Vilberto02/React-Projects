@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { CgMoreVerticalAlt } from "react-icons/cg";
+import { CgMoreVerticalAlt, CgTrash, CgPen } from "react-icons/cg";
 import styles from "./NoteCard.module.css";
 
 function NoteCard() {
@@ -14,16 +14,20 @@ function NoteCard() {
             console.log("edit");
             setSettings(!settings);
           }}
+          className={styles.item__menu}
         >
-          Edit
+          <CgPen />
+          <p>Edit</p>
         </li>
         <li
           onClick={() => {
             console.log("delete");
             setSettings(!settings);
           }}
+          className={styles.item__menu}
         >
-          Delete
+          <CgTrash />
+          <p>Delete</p>
         </li>
       </ul>
     </div>

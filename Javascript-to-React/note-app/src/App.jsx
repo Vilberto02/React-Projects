@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import NoteList from "./components/NoteList/NoteList";
+import Modal from "./components/Modal/Modal";
 
 function App() {
+  const [modal, setModal] = useState(false);
   return (
     <>
-      <NoteList />
+      {modal && <Modal setModal={setModal} />}
+      <NoteList setModal={setModal} modal={modal} />
     </>
   );
 }
