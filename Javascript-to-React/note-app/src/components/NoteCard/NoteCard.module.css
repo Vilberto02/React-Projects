@@ -15,6 +15,10 @@
   gap: 0.8rem;
 }
 
+.content .title {
+  text-transform: capitalize;
+}
+
 .details {
   display: flex;
   align-items: center;
@@ -36,7 +40,7 @@
   border-radius: 4px;
   position: absolute;
   bottom: 18px;
-  right: -42px;
+  right: -64px;
   display: none;
   flex-direction: column;
   transition: display 0.2s ease-in-out;

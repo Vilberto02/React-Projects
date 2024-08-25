@@ -5,10 +5,12 @@ import Modal from "./components/Modal/Modal";
 
 function App() {
   const [modal, setModal] = useState(false);
+
   return (
     <>
       {modal && <Modal setModal={setModal} />}
-      <NoteList setModal={setModal} modal={modal} />
+      <h1 className="title">Note App</h1>
+      <NoteList setModal={setModal} />
     </>
   );
 }

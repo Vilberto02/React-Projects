@@ -5,14 +5,50 @@ import TextArea from "../TextArea/TextArea";
 import { useState } from "react";
 import Button from "../Button/Button";
 import { CgClose } from "react-icons/cg";
+import { NoteContext } from "../../context/NoteContext";
+import { useContext } from "react";
 
 function NoteModal({ setModal }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+  const { createNote } = useContext(NoteContext);
+
+  const months = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Setiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+
+  const dateObj = new Date();
+  const dateString = `${dateObj.getDate()} de ${
+    months[dateObj.getMonth()]
+  }, ${dateObj.getFullYear()}`;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setDate(dateString);
+    createNote({
+      title,
+      description,
+      dateString,
+    });
+    console.log(title, description, date);
+    setModal(false);
+  };
 
   return (
     <>
-      <div className={styles.popup}>
+      <form className={styles.popup} onSubmit={handleSubmit}>
         <div className={styles.container__option}>
           <h3 className={styles.title__option}>Agregar nota</h3>
           <CgClose
@@ -34,15 +70,9 @@ function NoteModal({ setModal }) {
             setDescription={setDescription}
           />
         </div>
-        <span className={styles.date}>23 de Abril, 2024</span>
-        <Button
-          name="Agregar"
-          title={title}
-          setTitle={setTitle}
-          description={description}
-          setDescription={setDescription}
-        />
-      </div>
+        <span className={styles.date}>{dateString}</span>
+        <Button name="Agregar" />
+      </form>
     </>
   );
 }

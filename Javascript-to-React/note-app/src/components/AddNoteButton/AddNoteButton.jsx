@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./AddNoteButton.module.css";
 import { CgMathPlus } from "react-icons/cg";
 
-function AddNoteButton({ setModal }, { modal }) {
+function AddNoteButton({ setModal }) {
   return (
     <div className={styles.container}>
       <div className={styles.add__btn}>
@@ -11,7 +11,7 @@ function AddNoteButton({ setModal }, { modal }) {
           color="#324a5e"
           onClick={() => {
             console.log("click");
-            setModal(!modal);
+            setModal(true);
           }}
         />
       </div>

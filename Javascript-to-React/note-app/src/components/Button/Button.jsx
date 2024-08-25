@@ -1,17 +1,10 @@
 import React from "react";
 import styles from "./Buttons.module.css";
 
-function Button({ name, title, setTitle, description, setDescription }) {
+function Button({ name }) {
   return (
     <>
-      <button
-        className={styles.btn}
-        onClick={() => {
-          console.log(title, description);
-          setTitle("");
-          setDescription("");
-        }}
-      >{`${name}`}</button>
+      <button className={styles.btn}>{`${name}`}</button>
     </>
   );
 }
